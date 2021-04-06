@@ -152,7 +152,7 @@
     }
 };
     var jsontitle = new Object();
-    jsontitle.name = "LineUpTitle"
+    jsontitle.name = "LineUpTitle";
     jsontitle.value = document.getElementById("lineup_title").value;
     var jsondescription = new Object();
     jsondescription.name = "Description";
