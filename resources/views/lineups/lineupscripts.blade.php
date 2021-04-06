@@ -149,8 +149,8 @@
         else {
            alert('something else other than 200 was returned');
        }
-    }
-};
+      }
+    };
     var jsontitle = new Object();
     jsontitle.name = "LineUpTitle";
     jsontitle.value = document.getElementById("lineup_title").value;
@@ -187,8 +187,7 @@
     xmlhttp.send(JSON.stringify(infoArray));
   }
   else{
-    alert("You need to complete all the fields");
+    //add modal boostrap to warning about uncompleted fields
   }
-
 }
 </script>
