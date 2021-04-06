@@ -135,21 +135,22 @@
 
     //ajax
     function loadXMLDoc() {
-    var xmlhttp = new XMLHttpRequest();
+      if(checkUploadButton()){
+        var xmlhttp = new XMLHttpRequest();
 
-    xmlhttp.onreadystatechange = function() {
+        xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
-           if (xmlhttp.status == 200) {
-               console.log(xmlhttp.responseText);
-           }
-           else if (xmlhttp.status == 400) {
-              alert('There was an error 400');
-           }
-           else {
-               alert('something else other than 200 was returned');
-           }
-        }
-    };
+          if (xmlhttp.status == 200) {
+            console.log(xmlhttp.responseText);
+       }
+        else if (xmlhttp.status == 400) {
+          alert('There was an error 400');
+       }
+        else {
+           alert('something else other than 200 was returned');
+       }
+    }
+};
     var jsontitle = new Object();
     jsontitle.name = "LineUpTitle"
     jsontitle.value = document.getElementById("lineup_title").value;
@@ -184,5 +185,10 @@
     xmlhttp.setRequestHeader('X-CSRF-TOKEN', tokenValue[0].value);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
     xmlhttp.send(JSON.stringify(infoArray));
+  }
+  else{
+    alert("You need to complete all the fields")
+  }
+
 }
 </script>

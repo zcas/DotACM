@@ -75,7 +75,7 @@
     </div>
     <div>
         @csrf
-        <button id="enviarlnup" type="button" disabled="true" onclick="loadXMLDoc();">Upload</button>
+        <button id="enviarlnup" type="button" onclick="loadXMLDoc();">Upload</button>
     </div>
 </div>  
 @endauth
