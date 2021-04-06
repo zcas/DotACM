@@ -187,7 +187,7 @@
     xmlhttp.send(JSON.stringify(infoArray));
   }
   else{
-    alert("You need to complete all the fields")
+    alert("You need to complete all the fields");
   }
 
 }
