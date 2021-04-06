@@ -1,0 +1,58 @@
+#minimap {
+    position:relative;
+    left:0px;
+    top:0px;
+    bottom:0px;
+    right: 0px;
+}
+
+#h_1_1 {
+    position: absolute;
+    left: 200px;
+    top: 200px;
+}
+#h_1_2 {
+    position: absolute;
+    left: 95px;
+    bottom: 100px;
+}
+#h_1_3 {
+    position: absolute;
+    left: 15px;
+    bottom: 150px;
+}
+#h_1_4 {
+    position: absolute;
+    left: 15px;
+    bottom: 120px;
+}
+#h_1_5 {
+    position: absolute;
+    left: 170px;
+    top: 200px;
+}
+#h_2_1 {
+    position: absolute;
+    left: 20px;
+    top: 30px;
+}
+#h_2_2 {
+    position: absolute;
+    left: 120px;
+    top: 100px;
+}
+#h_2_3 {
+    position: absolute;
+    right: 15px;
+    top: 140px;
+}
+#h_2_4 {
+    position: absolute;
+    right: 15px;
+    top: 110px;
+}
+#h_2_5 {
+    position: absolute;
+    left: 50px;
+    top: 20px;
+}

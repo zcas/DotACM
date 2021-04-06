@@ -1,0 +1,149 @@
+#myInput {
+    background-image:url('/images/search.png'); /* Add a search icon to input */
+    background-size: 25px;
+    background-position: 10px 12px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    font-size: 16px; /* Increase font-size */
+    padding: 12px 20px 12px 40px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    margin-bottom: 12px; /* Add some space below the input */
+  }
+  
+  #myUL {
+    /* Remove default list styling */
+    max-height: 512px;
+    overflow: hidden;
+    overflow-y: scroll;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  #myUL li a {
+    border: 1px solid #ddd; /* Add a border to all links */
+    margin-top: -1px; /* Prevent double borders */
+    background-color: #f6f6f6; /* Grey background color */
+    padding: 12px; /* Add some padding */
+    text-decoration: none; /* Remove default text underline */
+    font-size: 18px; /* Increase the font-size */
+    color: black; /* Add a black text color */
+    display: block; /* Make it into a block element to fill the whole list */
+  }
+  
+  #myUL li a:hover:not(.header) {
+    background-color: #eee; /* Add a hover effect to all links, except for headers */
+  }
+
+  #lineupbox{
+      position: relative;
+  }
+
+  .herobox{
+      border:2px solid #ddd;
+      height: 54px;
+      width: 94px;
+      z-index: 1000;
+  }
+  .herobox.box1{
+      position: absolute;
+      top:50px;
+      left:50px;
+      
+  }
+  .herobox.box2{
+    position: absolute;
+    top:50px;
+    left:150px;
+}
+.herobox.box3{
+    position: absolute;
+    top:50px;
+    left:250px;
+}
+.herobox.box4{
+    position: absolute;
+    top:50px;
+    left:350px;
+}
+.herobox.box5{
+    position: absolute;
+    top:50px;
+    left:450px;
+}
+
+#pcontent{
+  position: relative;
+}
+
+.mappositions{
+  position:absolute;
+  top:150px;
+  left:50px;
+}
+
+.heromapico{
+  position:absolute;
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.heromapico.hero1{
+  top:180px;
+  left:450px;
+}
+
+.heromapico.hero2{
+  top:240px;
+  left:450px;
+}
+
+.heromapico.hero3{
+  top:300px;
+  left:450px;
+}
+
+.heromapico.hero4{
+  top:360px;
+  left:450px;
+}
+
+.heromapico.hero5{
+  top:420px;
+  left:450px;
+}
+
+.posIcoMap{
+  position:absolute;
+  height: 30px;
+  width: 30px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.posIcoMap.pos1{
+  top:380px;
+  left:345px;
+}
+
+.posIcoMap.pos2{
+  top:320px;
+  left:190px;
+}
+
+.posIcoMap.pos3{
+  top:250px;
+  left:75px;
+}
+
+.posIcoMap.pos4{
+  top:300px;
+  left:75px;
+}
+
+.posIcoMap.pos5{
+  top:430px;
+  left: 330px;
+}
