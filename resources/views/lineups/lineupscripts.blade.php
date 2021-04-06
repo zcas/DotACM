@@ -107,9 +107,9 @@
       var data = ev.dataTransfer.getData("text");
       ev.target.appendChild(document.getElementById(data));
     }
-    //upload button disable/enable
+    //upload button check
     function checkUploadButton(){
-
+      return(lineupTitleNotEmpty() && lineupDescriptionNotEmpty() && positionsNotEmpty());
     }
 
     //not empty auxs for check upload
@@ -127,6 +127,10 @@
       const divposition3 = document.getElementById("position3");
       const divposition4 = document.getElementById("position4");
       const divposition5 = document.getElementById("position5");
+      return (positionNotEmpty(divposition1) && positionNotEmpty(divposition2) && positionNotEmpty(divposition3) && positionNotEmpty(divposition4) && positionNotEmpty(divposition5))
+    }
+    function positionNotEmpty(pos){
+      return (pos.childElementCount != 0)
     }
 
     //ajax
