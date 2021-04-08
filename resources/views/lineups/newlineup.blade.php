@@ -9,6 +9,30 @@
 @auth
 @include('lineups.lineupscripts')
 <link rel="stylesheet" href="/css/newlineup.css">
+<!--modal-->
+<div class="modal" id="incompleteFieldModal" tabindex="-1" role="dialog" aria-labelledby="titleModal" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h5 id="titleModal">Titulo!</h5>
+            <button class="close" data-dismiss="modal" aria-label="Cerrar">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            <div class="alert alert-success">
+                <h6>Fill all the fields!</h6>
+            </div>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-warning" type="button" data-dismiss="modal">
+                Close
+            </button>
+        </div>
+    </div>
+</div>
+</div>
+<!--fin modal-->
 <div class="container">
     <div class="row">
         <div class="col-auto" id="lista-heroes">
@@ -37,7 +61,7 @@
             </div>
             <div class="row" id="pcontent">
                 <div class="mappositions">
-                    <img style="width: 350px;border-radius: 10%" src="/images/minimap/map.png">
+                    <img style="width: 350px;border-radius: 10%" src="/images/minimap/map.png" draggable="false">
                 </div>
                 <div id="icodiv">
                     <div class="heromapico hero1" id="ico0">

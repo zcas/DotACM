@@ -94,7 +94,7 @@
       }
     } 
   //drag and drop
-    function allowDrop(ev) {
+    function allowDrop(ev){
       ev.preventDefault();
     }
 
