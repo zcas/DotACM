@@ -188,6 +188,7 @@
   }
   else{
     //add modal boostrap to warning about uncompleted fields
+    $('#incompleteFieldModal').modal('show');
   }
 }
 </script>

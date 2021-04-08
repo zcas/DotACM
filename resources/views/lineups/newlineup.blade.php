@@ -14,13 +14,13 @@
 <div class="modal-dialog" role="document">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 id="titleModal">Titulo!</h5>
+            <h5 id="titleModal">Error: Missing fields</h5>
             <button class="close" data-dismiss="modal" aria-label="Cerrar">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
         <div class="modal-body">
-            <div class="alert alert-success">
+            <div class="alert alert-warning">
                 <h6>Fill all the fields!</h6>
             </div>
         </div>
