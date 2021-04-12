@@ -81,7 +81,9 @@ class LineupController extends Controller
      */
     public function store(Request $request)
     {
-        return $request->all();
+        if (Auth::check()){
+            return $request->all();
+        }
     }
 
 }

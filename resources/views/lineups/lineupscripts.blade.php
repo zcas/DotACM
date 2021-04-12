@@ -151,40 +151,19 @@
        }
       }
     };
-    var jsontitle = new Object();
-    jsontitle.name = "LineUpTitle";
-    jsontitle.value = document.getElementById("lineup_title").value;
-    var jsondescription = new Object();
-    jsondescription.name = "Description";
-    jsondescription.value = document.getElementById("lineUpDescription").value;
-    var jsonPos1 = new Object();
-    jsonPos1.name = "Pos1Hero";
-    jsonPos1.value = document.getElementById("position1").firstElementChild.alt.slice(4);
-    var jsonPos2 = new Object();
-    jsonPos2.name = "Pos2Hero";
-    jsonPos2.value = document.getElementById("position2").firstElementChild.alt.slice(4);
-    var jsonPos3 = new Object();
-    jsonPos3.name = "Pos3Hero";
-    jsonPos3.value = document.getElementById("position3").firstElementChild.alt.slice(4);
-    var jsonPos4 = new Object();
-    jsonPos4.name = "Pos4Hero";
-    jsonPos4.value = document.getElementById("position4").firstElementChild.alt.slice(4);
-    var jsonPos5 = new Object();
-    jsonPos5.name = "Pos5Hero";
-    jsonPos5.value = document.getElementById("position5").firstElementChild.alt.slice(4);
-    var infoArray = new Array();
-    infoArray.push(jsontitle);
-    infoArray.push(jsondescription);
-    infoArray.push(jsonPos1);
-    infoArray.push(jsonPos2);
-    infoArray.push(jsonPos3);
-    infoArray.push(jsonPos4);
-    infoArray.push(jsonPos5);
+    var lineupData = new Object();
+    lineupData.title = document.getElementById("lineup_title").value;
+    lineupData.description = document.getElementById("lineUpDescription").value;
+    lineupData.pos1 = parseInt(document.getElementById("position1").firstElementChild.alt.slice(4));
+    lineupData.pos2 = parseInt(document.getElementById("position2").firstElementChild.alt.slice(4));
+    lineupData.pos3 = parseInt(document.getElementById("position3").firstElementChild.alt.slice(4));
+    lineupData.pos4 = parseInt(document.getElementById("position4").firstElementChild.alt.slice(4));
+    lineupData.pos5 = parseInt(document.getElementById("position5").firstElementChild.alt.slice(4));
     var tokenValue = document.getElementsByName("_token");  
     xmlhttp.open("POST", "lineupnewstore", true);
     xmlhttp.setRequestHeader('X-CSRF-TOKEN', tokenValue[0].value);
     xmlhttp.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
-    xmlhttp.send(JSON.stringify(infoArray));
+    xmlhttp.send(JSON.stringify(lineupData));
   }
   else{
     //add modal boostrap to warning about uncompleted fields
