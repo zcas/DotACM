@@ -4,17 +4,16 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Lineup extends Model
+class LineupPick extends Model
 {
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    protected $table = 'lineups';
+    protected $table = 'lineup_picks';
 
     protected $fillable = [
-        'user_id' , 'title' , 'description'
+        'lineup_id' , 'hero_id' , 'position'
     ];
-
 }

@@ -49,7 +49,7 @@
                     <h4>Lineup Title:</h4>
                 </div>
                 <div class="col-auto">
-                    <input type="text" name="title" id="lineup_title" style="width: 380px">
+                    <input type="text" name="title" id="lineup_title" style="width: 380px" maxlength="255">
                 </div>
             </div>
             <div class="row" id="lineupbox">

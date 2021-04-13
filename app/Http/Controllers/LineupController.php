@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Lineup;
+use App\LineupPick;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Auth;
@@ -81,8 +82,62 @@ class LineupController extends Controller
      */
     public function store(Request $request)
     {
-        if (Auth::check()){
-            return $request->all();
+        if (Auth::check() && Auth::id() == $request->user()->id){
+            $request->validate([
+                'title' => 'required|max:255',
+                'description' => 'required',
+                'pos1' => 'required',
+                'pos2' => 'required',
+                'pos3' => 'required',
+                'pos4' => 'required',
+                'pos5' => 'required'
+            ]);
+
+            $newlineup = new Lineup([
+                'user_id' => $request->user()->id,
+                'title' => $request->title,
+                'description' => $request->description
+            ]);
+            $newlineup->save();
+
+            $pos1Pick = new LineupPick([
+                'lineup_id' => $newlineup->id,
+                'position' => 1,
+                'hero_id' => $request->pos1
+            ]);
+            $pos1Pick->save();
+
+            $pos2Pick = new LineupPick([
+                'lineup_id' => $newlineup->id,
+                'position' => 2,
+                'hero_id' => $request->pos2
+            ]);
+            $pos2Pick->save();
+
+            $pos3Pick = new LineupPick([
+                'lineup_id' => $newlineup->id,
+                'position' => 3,
+                'hero_id' => $request->pos3
+            ]);
+            $pos3Pick->save();
+
+            $pos4Pick = new LineupPick([
+                'lineup_id' => $newlineup->id,
+                'position' => 4,
+                'hero_id' => $request->pos4
+            ]);
+            $pos4Pick->save();
+
+            $pos5Pick = new LineupPick([
+                'lineup_id' => $newlineup->id,
+                'position' => 5,
+                'hero_id' => $request->pos5
+            ]);
+            $pos5Pick->save();
+
+            return $newlineup->id;
+        } else{
+            return 0;
         }
     }
 

@@ -141,7 +141,11 @@
         xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {   // XMLHttpRequest.DONE == 4
           if (xmlhttp.status == 200) {
-            console.log(xmlhttp.responseText);
+            if(xmlhttp.response > 0 ){
+              window.location = ('/lineups/' + xmlhttp.response);
+            }else{
+              window.location = ('/lineups');
+            }       
        }
         else if (xmlhttp.status == 400) {
           alert('There was an error 400');
