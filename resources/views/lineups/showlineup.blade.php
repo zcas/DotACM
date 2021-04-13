@@ -50,6 +50,6 @@
             </div>
     </div>
     @include('lineups.showcomments')
-    @include('lineups.commentform')
+    @include('lineups.lineupcommentform')
 </div>
 @endsection

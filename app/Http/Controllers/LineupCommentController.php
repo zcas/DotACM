@@ -36,22 +36,24 @@ class LineupCommentController extends Controller
      */
     public function store(Request $request)
     {
-        if (Auth::check()) {
+        if(Auth::check()){
             $request->validate([
-                'user_id' => 'required',
-                'comment_text' => 'required',
+                'lineupcomment' => 'required|max:255',
                 'lineup_id' => 'required'
             ]);
-            $comment = new LineupComment([
-                'user_id' =>$request->user_id,
+
+            $newlineupcomment = new LineupComment([
+                'user_id' => Auth::id(),
                 'lineup_id' => $request->lineup_id,
-                'comment_text' => $request->comment_text
+                'comment_text' => $request->lineupcomment
             ]);
-            $comment->save();
-            return redirect('/lineups/'.$request->lineup_id)->with('success','Comment Saved!');}
-            else{
-                return redirect('/lineups');
-            }
+
+            $newlineupcomment->save();
+            
+            return redirect('/lineups/'.$request->lineup_id);
+        }else{
+            return redirect('/lineups');
+        }
     }
 
     /**
