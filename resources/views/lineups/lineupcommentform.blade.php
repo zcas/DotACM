@@ -12,7 +12,7 @@
             <div class="col">
                 <textarea name="lineupcomment" rows="3" cols="40" maxlength="250"></textarea>
                 <input type="hidden" name="lineup_id" value="{{$lineup->id}}">
-            </div>   
+            </div>
         </div>
         <div class="row">
             <div class="col" style="text-align: right">
@@ -21,5 +21,5 @@
         </div>
         <br>
     </form>
-</div>    
+</div>
 @endauth

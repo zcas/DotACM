@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Auth;
 class LineupController extends Controller
 {
     public function index(){
-        
+
         $lineups = Lineup::paginate(25);
 
         return view('lineups.list')->with([
@@ -24,7 +24,7 @@ class LineupController extends Controller
         if (empty($lineup)){
             return view('lineups.notfound');
         }else{
-            
+
             //picks
             $lineup_picks=DB::table('lineup_picks')->where('lineup_id',$lineup->id)
             ->leftJoin('heros','lineup_picks.hero_id','heros.id')
@@ -38,7 +38,7 @@ class LineupController extends Controller
             $comments=DB::table('lineup_comments')->where('lineup_id', $id)
             ->leftJoin('users','users.id','lineup_comments.user_id')
             ->select('users.id','users.avatar','users.name','lineup_comments.comment_text')
-            ->paginate(50);
+            ->paginate(5);
 
             //votes
             $upvotes=DB::table('lineup_votes')->where('lineup_id',$id)->where('upvote', '1')->count();
